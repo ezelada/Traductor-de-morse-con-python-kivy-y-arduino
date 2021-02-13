@@ -1,0 +1,35 @@
+<Morse>:
+    respuesta_text_input: respuesta
+    canvas:
+        Color:
+            rgb: 0,1,0
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+    Label:
+        text: '"DECODIFICADOR DE CODIGO MORSE"'
+        font_size: 30
+        size_hint: 0.08,None
+        height: self.width
+        pos: 320,320
+
+    TextInput:
+        id:respuesta
+        font_size: 40
+        multiline: True
+        size_hint: 0.8,0.4
+        pos: 70,114
+        on_text_validate:root.actualizar()
+
+    Button:
+        text: "ACTUALIZAR"
+        size_hint: 0.20,0.15
+        pos: 150,30
+        on_release: root.actualizar()
+    
+    Button:
+        text: "BORRAR"
+        size_hint: 0.20,0.15
+        pos: 380,30
+        on_release: root.borrar()
